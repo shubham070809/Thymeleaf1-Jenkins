@@ -57,7 +57,7 @@ public class EmployeeController {
         // save the employee
         employeeService.createEmployee(employee);
         // use a redirect to prevent duplicate submissions
-        return "redirect:/displayEmployees";
+        return "redirect:/";
     }
 
     @GetMapping("/showFormForUpdate")
@@ -75,6 +75,6 @@ public class EmployeeController {
         // delete the employee
         employeeService.deleteEmployee(theId);
         // redirect to /employees/list
-        return "redirect:/displayEmployees";
+        return "redirect:/";
     }
 }
