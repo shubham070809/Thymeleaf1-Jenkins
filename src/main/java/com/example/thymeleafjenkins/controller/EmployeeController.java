@@ -10,14 +10,14 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Controller
-@RequestMapping("/employees")
+//@RequestMapping("/employees")
 public class EmployeeController {
 
     @Autowired
     private EmployeeService employeeService;
 
 
-    @GetMapping("/displayEmployees")
+    @GetMapping("/")
     public String listEmployees(Model theModel) {
 //		 // create employees
 //		 Employee emp1 = new Employee(1, "Leslie", "Andrews", "leslie@luv2code.com");
@@ -57,7 +57,7 @@ public class EmployeeController {
         // save the employee
         employeeService.createEmployee(employee);
         // use a redirect to prevent duplicate submissions
-        return "redirect:/employees/displayEmployees";
+        return "redirect:/displayEmployees";
     }
 
     @GetMapping("/showFormForUpdate")
@@ -75,6 +75,6 @@ public class EmployeeController {
         // delete the employee
         employeeService.deleteEmployee(theId);
         // redirect to /employees/list
-        return "redirect:/employees/displayEmployees";
+        return "redirect:/displayEmployees";
     }
 }

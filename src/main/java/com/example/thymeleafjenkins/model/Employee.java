@@ -11,7 +11,6 @@ public class Employee {
     @Column(name = "id")/*This is done in order to the data doesnt get inserted twice while hitting the save as save generates a new id as well as used to update customer*/
     private Integer id=new Random().nextInt(1000);
 
-
     @Column(name ="first_name")
     private String firstName;
 
@@ -20,8 +19,6 @@ public class Employee {
 
     @Column(name = "email")
     private String email;
-
-
 
     public Employee() {
         super();
@@ -84,9 +81,5 @@ public class Employee {
     public void setEmail(String email) {
         this.email = email;
     }
-
-
-
-
 
 }
